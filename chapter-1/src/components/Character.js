@@ -1,10 +1,10 @@
-export function Character(character) {
+export function Character(props) {
     return (
         <div>
-            <h3>{character.name}</h3>
-            <h4>{`Id: ${character.id}`}</h4>
-            <img src={character.image} alt={character.name} width="300"/>
-            <p>{`Origin ${character.origin.name}`}</p>
+            <h3>{props.name}</h3>
+            <h4>{`Id: ${props.id}`}</h4>
+            <img src={props.image} alt={props.name} width="300"/>
+            <p>{`Origin ${props.origin.name}`}</p>
         </div>
     );
 }
