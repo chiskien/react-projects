@@ -1,10 +1,18 @@
-export function Character(props) {
+export function Character(characterProps) {
     return (
-        <div>
-            <h3>{props.name}</h3>
-            <h4>{`Id: ${props.id}`}</h4>
-            <img src={props.image} alt={props.name} width="300"/>
-            <p>{`Origin ${props.origin.name}`}</p>
+        <div className="col-3">
+            <div className="card">
+                <img src={characterProps.image} alt={characterProps.name} className="card-img-top"/>
+                <div className="card-body">
+                    <h3 className="card-title">
+                        {characterProps.name}
+                    </h3>
+                    <p>
+                        {`Origin: ${characterProps.origin && characterProps.origin.name}`}
+                    </p>
+                </div>
+            </div>
         </div>
-    );
+    )
+        ;
 }

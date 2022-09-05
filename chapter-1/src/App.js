@@ -1,10 +1,12 @@
 import {List} from "./components/List";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export function App() {
-    return (
-        <div className="container">
-            <h1>Rick and Morty</h1>
+    return (<div className="container">
+            <nav className="navbar sticky-top navbar-light bg-dark">
+                <h1 className="navbar-brand text-light">
+                    Rick and Morthy
+                </h1>
+            </nav>
             <List/>
         </div>
 
