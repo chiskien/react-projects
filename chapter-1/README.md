@@ -16,3 +16,7 @@
 ### Setting up Babel
 
 - `npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react`
+
+### Setting up webpack server
+
+`npm install webpack-server`
