@@ -4,6 +4,9 @@ export function Character(characterProps) {
             <div className="card">
                 <img src={characterProps.image} alt={characterProps.name} className="card-img-top"/>
                 <div className="card-body">
+                    <h4 className="card-title">
+                        {`Id: ${characterProps.id}`}
+                    </h4>
                     <h3 className="card-title">
                         {characterProps.name}
                     </h3>

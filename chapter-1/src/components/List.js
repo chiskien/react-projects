@@ -25,7 +25,8 @@ export function List() {
         <h2>Characters</h2>
         <div className="row">
             {loading ? (<div>Loading...</div>) : (characters.map((character) =>
-                (<Character id={character.id}
+                (<Character key={character.id}
+                            id={character.id}
                             name={character.name}
                             origin={character.origin}
                             image={character.image}/>)))
