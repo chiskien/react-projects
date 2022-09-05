@@ -29,8 +29,7 @@ export function List() {
                             id={character.id}
                             name={character.name}
                             origin={character.origin}
-                            image={character.image}/>)))
-            }
+                            image={character.image}/>)))}
         </div>
 
     </div>)
