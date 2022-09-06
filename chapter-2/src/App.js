@@ -6,7 +6,7 @@ import {Profile} from "./pages/Profile";
 function App() {
     return (<div className="App">
         <Header logo={logo}/>
-        <Profile/>
+        <Profile username="chiskien"/>
     </div>);
 }
 

@@ -23,7 +23,9 @@ export function Profile({username}) {
         <div>
             <h2>About me</h2>
             {loading ? (<span>Loading.....</span>) : (
-                <ul></ul>
+                <ul>
+
+                </ul>
             )}
         </div>
     )
