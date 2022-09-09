@@ -1,10 +1,19 @@
 import {useEffect, useState} from "react";
 import "./Profile.css";
 import {Link} from "../components/Header/Link";
+import {List} from "../components/List";
 
 export function Profile({username}) {
     const [loading, setLoading] = useState(false);
     const [profile, setProfile] = useState({});
+    const items = [{
+        field: "html_url", value: <Link url={profile.html_url} title={profile.html_url}/>
+    }, {
+        field: 'repos_url', value: <Link url={profile.repos_url} title={profile.repos_url}/>,
+    }, {
+        field: "followers_url", value: <Link url={profile.followers_url} title={profile.followers_url}/>
+    }]
+
 
     useEffect(() => {
         async function fetchData() {
@@ -23,22 +32,7 @@ export function Profile({username}) {
         {loading ? (<span>Loading.....</span>) : (<div>
             <h2>About me</h2>
             <img src={profile.avatar_url} alt={profile.name} className="Profile-avatar"/>
-            <ul>
-                <li>
-                    <span>html_url: </span>
-                    <Link url={profile.html_url} title={profile.html_url}/>
-                </li>
-                <li>
-                    <span>repos_url: </span>
-                    <Link url={profile.repos_url} title={profile.repos_url}/>
-                </li>
-                <li>
-                    <span>Name: {profile.name}</span>
-                </li>
-                <li>
-                    <span>Location: {profile.location}</span>
-                </li>
-            </ul>
+            <List items={items}/>
         </div>)}
     </div>)
 }
